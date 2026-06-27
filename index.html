@@ -174,10 +174,10 @@ const ACCT = {
         script:"a71_batch_6_26_toggle.py off", cron:"0 14 26 6 *", when:"21:00 WIB · 26 Jun",
         desc:"Matiin 16 campaign batch tadi di malam hari.",
         camps:["(sama dengan job ON di atas — 16 campaign)"], note:"One-shot window 25–26 Jun — sudah lewat, dorman.", onCmd:"on cron a71 batch screenshot 6/26", offCmd:"off cron a71 batch screenshot 6/26" },
-      { title:"A71 50rb no-IC OFF guard", badge:["b-on","Aktif 15m"],
+      { title:"A71 50rb no-IC / 90rb no-Purchase OFF guard", badge:["b-on","Aktif 15m"],
         script:"account71_spend_ic_ctr_budget_guard.py", cron:"every 15m", when:"tiap 15 menit",
-        desc:"Tommy request: kalau Account 71 spend daily ≥50rb dan IC 0, campaign gate wajib OFF.",
-        camps:["Account 71 campaign gates only"], note:"Campaign-level only. Adset/ad/bid/delete tidak disentuh.", onCmd:"on cron a71 50rb no ic guard", offCmd:"off cron a71 50rb no ic guard" }
+        desc:"Tommy request: Account 71 spend daily ≥50rb + IC 0 OFF; atau spend daily ≥90rb + Purchase 0 OFF.",
+        camps:["Account 71 campaign gates only","Rule 1: spend ≥Rp50.000 + IC 0","Rule 2: spend ≥Rp90.000 + Purchase 0"], note:"Campaign-level only. Adset/ad/bid/delete tidak disentuh.", onCmd:"on cron a71 50rb no ic 90rb no purchase guard", offCmd:"off cron a71 50rb no ic 90rb no purchase guard" }
     ]
   },
   p80: {
