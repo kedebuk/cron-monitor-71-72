@@ -74,11 +74,13 @@ def graph_batch(token: str, ids: list[str]) -> dict:
 
 
 def fmt_budget(c: dict) -> str:
-    cents = c.get('daily_budget') or c.get('lifetime_budget')
-    if not cents:
+    raw = c.get('daily_budget') or c.get('lifetime_budget')
+    if not raw:
         return '-'
     try:
-        rp = int(cents) / 100
+        # IDR on Meta Graph is already rupiah units. Do NOT divide by 100:
+        # daily_budget=100000 means Rp100.000/day, not Rp1.000/day.
+        rp = int(raw)
         kind = 'hari' if c.get('daily_budget') else 'total'
         return f'Rp{rp:,.0f}/{kind}'.replace(',', '.')
     except Exception:

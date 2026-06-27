@@ -13,7 +13,7 @@
    "name": "(TESTING CBO) TB 6/5/26 ON",
    "on": true,
    "status": "ACTIVE",
-   "budget": "Rp3.500/hari",
+   "budget": "Rp350.000/hari",
    "objective": "OUTCOME_LEADS"
   },
   {
@@ -21,7 +21,7 @@
    "name": "( TESTING CBO ) TB 6/26/26 STATUE IMAGE NEW 10 ON",
    "on": true,
    "status": "ACTIVE",
-   "budget": "Rp1.306/hari",
+   "budget": "Rp130.600/hari",
    "objective": "OUTCOME_LEADS"
   },
   {
@@ -29,7 +29,7 @@
    "name": "(TESTING CBO) TB 6/5/26 – Copy 3",
    "on": true,
    "status": "ACTIVE",
-   "budget": "Rp1.500/hari",
+   "budget": "Rp150.000/hari",
    "objective": "OUTCOME_LEADS"
   },
   {
@@ -37,7 +37,7 @@
    "name": "(TESTING CBO) TB 6/5/26 – LP2 ON",
    "on": true,
    "status": "ACTIVE",
-   "budget": "Rp1.500/hari",
+   "budget": "Rp150.000/hari",
    "objective": "OUTCOME_LEADS"
   },
   {
@@ -45,7 +45,7 @@
    "name": "( TESTING CBO ) TB 6/26/26 STATUE IMAGE NEW 10 - Copy",
    "on": true,
    "status": "ACTIVE",
-   "budget": "Rp1.000/hari",
+   "budget": "Rp100.000/hari",
    "objective": "OUTCOME_LEADS"
   },
   {
@@ -53,8 +53,9 @@
    "name": "(TESTING CBO) TB 6/5/26 – Copy - PURCHASE 150rb",
    "on": true,
    "status": "ACTIVE",
-   "budget": "Rp1.500/hari",
+   "budget": "Rp150.000/hari",
    "objective": "OUTCOME_SALES"
   }
- ]
+ ],
+ "budget_note": "IDR budget corrected: Meta Graph daily_budget is raw rupiah, not cents."
 }
