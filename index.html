@@ -156,7 +156,10 @@ const ACCT = {
   p71: {
     name:"Akun 71 — Evepro 71",
     pills:["act_1128908469237968","VPS /root/automation","color:71"],
-    jobs:[
+    history:[
+      { time:"2026-06-27 13:29 WIB", job:"A71 50rb no-IC / 90rb no-Purchase OFF guard", action:"PAUSE", campaign:"6/27/26 ( SCALE VERTIKAL V1 'HJTN')", spend:"Rp52.358", rule:"IC 0 + spend ≥ Rp50.000", readback:"PAUSED/PAUSED" }
+    ],
+    jobs:
       { title:"Video batch 6/26 — ON", badge:["b-dorm","Dorman"],
         script:"a71_videos_6_26_toggle.py on", cron:"0 23 25 6 *", when:"06:00 WIB · 26 Jun",
         desc:"Nyalain (ACTIVE) 3 campaign video batch 26 Juni di pagi hari.",
@@ -278,6 +281,7 @@ function render(){
       <span class="pill">${a.pills[0]}</span>
       <span class="pill">${a.pills[1]}</span>
       <span class="pill">${a.jobs.length} cron job</span></div>
+      ${a.history?`<div class="card"><h3>📜 History trigger terbaru</h3><ul class="camp">${a.history.map(h=>`<li><b>${esc(h.time)}</b> · ${esc(h.action)} · ${esc(h.spend)} · ${esc(h.rule)} · ${esc(h.readback)}<br><span style="color:var(--txt)">${esc(h.campaign)}</span></li>`).join("")}</ul></div>`:""}
       <div class="live" id="live-${id}"><h3>📡 Status live Meta</h3><p class="syn">memuat…</p></div>
       <h2 style="font-size:.95rem;color:var(--muted);margin:18px 0 10px">🗓️ Jadwal cron (dayparting)</h2>
       <div class="grid">`;
