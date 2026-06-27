@@ -177,7 +177,11 @@ const ACCT = {
       { title:"A71 50rb no-IC / 90rb no-Purchase OFF guard", badge:["b-on","Aktif 15m"],
         script:"account71_spend_ic_ctr_budget_guard.py", cron:"every 15m", when:"tiap 15 menit",
         desc:"Tommy request: Account 71 spend daily ≥50rb + IC 0 OFF; atau spend daily ≥90rb + Purchase 0 OFF.",
-        camps:["Account 71 campaign gates only","Rule 1: spend ≥Rp50.000 + IC 0","Rule 2: spend ≥Rp90.000 + Purchase 0"], note:"Campaign-level only. Adset/ad/bid/delete tidak disentuh.", onCmd:"on cron a71 50rb no ic 90rb no purchase guard", offCmd:"off cron a71 50rb no ic 90rb no purchase guard" }
+        camps:["Account 71 campaign gates only","Rule 1: spend ≥Rp50.000 + IC 0","Rule 2: spend ≥Rp90.000 + Purchase 0"], note:"Campaign-level only. Adset/ad/bid/delete tidak disentuh.", onCmd:"on cron a71 50rb no ic 90rb no purchase guard", offCmd:"off cron a71 50rb no ic 90rb no purchase guard" },
+      { title:"A71 CPP <25rb auto-scale budget", badge:["b-on","Aktif hourly"],
+        script:"account71_cpp25_purchase3_budget_lift_guard.py", cron:"every 60m", when:"tiap 1 jam",
+        desc:"Kalau Purchase minimal 3 dan CPP <Rp25.000, budget campaign naik +35% tiap jam. Kalau CPP sudah >Rp50.000, stop dinaikin. Besok reset ke budget awal.",
+        camps:["Min Purchase: 3","Naik: CPP < Rp25.000","Stop naik: CPP > Rp50.000","Reset: besok balik budget awal","Exclude: campaign scale vertikal"], note:"Campaign budget only. Scale vertikal excluded. Adset/ad/bid/delete tidak disentuh.", onCmd:"on cron a71 cpp25 purchase3 budget lift", offCmd:"off cron a71 cpp25 purchase3 budget lift" }
     ]
   },
   p80: {
