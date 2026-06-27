@@ -188,15 +188,15 @@ const ACCT = {
     pills:["store_id 17742","VPS /opt/roni-automation/scalev-stableprofit-notifier","3 active cron"],
     jobs:[
       { title:"Purchase notifier", badge:["b-on","Aktif 1m"],
-        script:"notifier.py", cron:"* * * * *", when:"tiap 1 menit",
+        script:"notifier.py", cron:"tiap 1 menit (WIB)", when:"tiap 1 menit",
         desc:"Cek order Scalev Stable Profit yang paid/settled, hard-filter store 17742, lalu kirim Telegram hanya kalau ada purchase baru.",
         camps:["Source of truth: Scalev orders, bukan Meta Insights","State seen_ids: 147","Last checked: 2026-06-27 11:07 WIB"], note:"Dibuat karena polling Meta bikin rate limit; notifier dipindah dari Hermes job a4b50ab2f0f0 ke VPS." },
       { title:"Daily recap", badge:["b-on","Aktif daily"],
-        script:"notifier.py --recap", cron:"0 14 * * *", when:"21:00 WIB · tiap hari",
+        script:"notifier.py --recap", cron:"21:00 WIB tiap hari", when:"21:00 WIB · tiap hari",
         desc:"Kirim rekap harian Stable Profit: ringkasan order/purchase supaya nggak perlu nanya dashboard manual tiap malam.",
         camps:["Store Stable Profit 17742"], note:"Jalan dari VPS, log recap terpisah." },
       { title:"Payment guard", badge:["b-on","Aktif 1m"],
-        script:"payment_guard.py", cron:"* * * * *", when:"tiap 1 menit",
+        script:"payment_guard.py", cron:"tiap 1 menit (WIB)", when:"tiap 1 menit",
         desc:"Ngecek config payment Stable Profit. Kalau metode wajib/VA hilang, kirim alert dan restore ADDITIVE-only; nggak hapus metode lain.",
         camps:["Auto-fix payment config","Silent kalau semua normal","Secrets tetap server-side"], note:"Ini guard pembayaran, bukan Meta write; jangan disamain sama campaign guard." }
     ]
@@ -272,12 +272,12 @@ function render(){
       <div class="grid">`;
     for(const j of a.jobs){
       let camps = j.camps && j.camps.length
-        ? `<details><summary>Campaign dikelola (${j.camps.length})</summary><ul class="camp">${j.camps.map(c=>`<li>${c}</li>`).join("")}</ul></details>`
+        ? `<details open><summary>Detail / target (${j.camps.length})</summary><ul class="camp">${j.camps.map(c=>`<li>${c}</li>`).join("")}</ul></details>`
         : "";
       html += `<div class="card">
         <h3>${j.title} <span class="badge ${j.badge[0]}">${j.badge[1]}</span></h3>
-        <div class="row"><span class="k">Jadwal</span><span class="v when">${j.when}</span></div>
-        <div class="row"><span class="k">Cron</span><span class="v"><code>${j.cron}</code> <span style="color:var(--muted)">(UTC)</span></span></div>
+        <div class="row"><span class="k">Jadwal WIB</span><span class="v when">${j.when}</span></div>
+        <div class="row"><span class="k">Cron VPS</span><span class="v"><code>${j.cron}</code></span></div>
         <div class="row"><span class="k">Script</span><span class="v"><code>${j.script}</code></span></div>
         <div class="desc">${j.desc}</div>
         ${j.note?`<div class="row"><span class="k">Status</span><span class="v" style="color:var(--muted)">${j.note}</span></div>`:""}

@@ -13,7 +13,7 @@
    "name": "Purchase notifier — polling paid/settled orders",
    "on": true,
    "status": "ACTIVE",
-   "budget": "* * * * *",
+   "budget": "tiap 1 menit (WIB)",
    "objective": "Notify Telegram on new Stable Profit purchases"
   },
   {
@@ -21,7 +21,7 @@
    "name": "Daily recap — Scalev Stable Profit summary",
    "on": true,
    "status": "ACTIVE",
-   "budget": "21:00 WIB daily",
+   "budget": "21:00 WIB tiap hari",
    "objective": "Send daily purchase/order recap"
   },
   {
@@ -29,7 +29,7 @@
    "name": "Payment guard — keep payment methods/VA alive",
    "on": true,
    "status": "ACTIVE",
-   "budget": "* * * * *",
+   "budget": "tiap 1 menit (WIB)",
    "objective": "Alert + additive-only restore if payment config missing"
   }
  ],
