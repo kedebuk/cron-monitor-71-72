@@ -58,16 +58,31 @@
   .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
   footer{max-width:1000px;margin:0 auto;padding:0 18px 40px;color:var(--muted);font-size:.76rem}
   a{color:var(--accent)}
+  .live{margin:0 0 22px;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+  .live h3{margin:0 0 4px;font-size:1rem;display:flex;align-items:center;gap:8px}
+  .live .syn{color:var(--muted);font-size:.76rem;margin:0 0 12px}
+  .counts{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .cbox{flex:1;min-width:90px;text-align:center;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card2)}
+  .cbox .n{font-size:1.5rem;font-weight:800;line-height:1.1}
+  .cbox .l{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .cbox.on .n{color:var(--on)} .cbox.off .n{color:var(--off)} .cbox.unk .n{color:var(--warn)}
+  .explain{font-size:.85rem;color:var(--txt);margin:12px 0 6px;padding-top:12px;border-top:1px dashed var(--line)}
+  .clist{list-style:none;margin:8px 0 0;padding:0}
+  .clist li{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;background:var(--card2);
+            border:1px solid var(--line);margin:6px 0;font-size:.84rem}
+  .clist li .cn{flex:1;word-break:break-word}
+  .clist li .cb{font-size:.72rem;color:var(--muted);white-space:nowrap}
+  .err{color:var(--off);font-size:.85rem}
 </style>
 </head>
 <body>
 <header>
   <h1>🛰️ Cron Monitor — Akun 71 &amp; 72</h1>
-  <p class="sub">Dayparting Meta Ads (nyalain pagi / matiin malam) yang dikendalikan dari VPS DagangPro.</p>
+  <p class="sub">Dayparting Meta Ads (nyalain pagi / matiin malam) yang dikendalikan dari VPS DagangPro. Akun 71 sekarang <b>tersambung status live dari Meta</b>.</p>
   <div class="legend">
     <span><span class="dot" style="background:var(--on)"></span>Aktif / ON</span>
-    <span><span class="dot" style="background:var(--off)"></span>OFF (matiin)</span>
-    <span><span class="dot" style="background:var(--dorm)"></span>Dorman (one-shot lewat)</span>
+    <span><span class="dot" style="background:var(--off)"></span>OFF (PAUSED)</span>
+    <span><span class="dot" style="background:var(--dorm)"></span>Dorman (cron one-shot lewat)</span>
   </div>
   <p class="meta" id="meta"></p>
 </header>
@@ -94,6 +109,18 @@
       <div class="row"><span class="k">Log</span><span class="v"><code>/root/automation/logs/</code></span></div>
       <div class="row"><span class="k">Mac Mini</span><span class="v">tidak ada cron khusus a71/a72 — semua di VPS</span></div>
       <div class="row"><span class="k">Token</span><span class="v">disimpan server-side (<code>.env</code>), tidak ada di repo ini</span></div>
+    </div>
+    <div class="card">
+      <h3>🎛️ Kontrol ON/OFF cron (71 &amp; 72)</h3>
+      <p>Halaman ini statis (GitHub Pages) jadi <b>tombol di sini nggak boleh pegang token</b> — kalau dipaksa, token Meta bakal bocor ke browser. Jadi kontrol cron dijalanin lewat <b>MASBOI di grup Telegram</b> (paling aman, nggak nyimpen kredensial di mana-mana):</p>
+      <div class="row"><span class="k">Matiin cron</span><span class="v">bilang ke MASBOI: <code>off cron a71</code> / <code>off cron a72</code></span></div>
+      <div class="row"><span class="k">Nyalain cron</span><span class="v"><code>on cron a71</code> / <code>on cron a72</code></span></div>
+      <div class="row"><span class="k">Eksekusi</span><span class="v">MASBOI komen/uncomment baris crontab di VPS, lalu kasih konfirmasi readback</span></div>
+      <p style="color:var(--muted);font-size:.82rem;margin-top:8px">Opsi tombol di dashboard bisa dibikin nanti via GitHub Actions, tapi butuh simpan SSH key sebagai GitHub Secret — nunggu keputusan Roni dulu.</p>
+    </div>
+    <div class="card">
+      <h3>📡 Status live datang dari mana?</h3>
+      <p>Script <code>sync_status.py</code> jalan di VPS (yang pegang token), baca status campaign 1× batch per akun, lalu nulis <code>data/a71.json</code> &amp; <code>data/a72.json</code> ke repo — <b>tanpa token</b>. Browser cuma baca JSON itu, <b>nggak pernah manggil Meta langsung</b>, jadi nggak ada spam API.</p>
     </div>
     <div class="card">
       <h3>Zona waktu</h3>
@@ -154,8 +181,46 @@ const ACCT = {
   }
 };
 
+const LIVE = { p71:"./data/a71.json", p72:"./data/a72.json" };
+
+function esc(s){return String(s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+
+async function loadLive(id){
+  const slot = document.getElementById("live-"+id);
+  if(!slot) return;
+  try{
+    const r = await fetch(LIVE[id] + "?t=" + Date.now());
+    if(!r.ok) throw new Error("HTTP "+r.status);
+    const d = await r.json();
+    if(d.error){ slot.innerHTML = `<h3>📡 Status live Meta</h3><p class="err">Gagal sync (Meta error ${esc(d.error)}). Tampilkan jadwal cron di bawah.</p>`; return; }
+    const onC = d.campaigns.filter(c=>c.on===true);
+    const offC = d.campaigns.filter(c=>c.on===false);
+    const unkC = d.campaigns.filter(c=>c.on===null);
+    const li = c => `<li><span class="badge ${c.on?'b-on':(c.on===false?'b-off':'b-dorm')}">${c.on?'ON':(c.on===false?'OFF':'?')}</span>
+        <span class="cn">${esc(c.name)}</span><span class="cb">${esc(c.budget||'-')}</span></li>`;
+    let exp = `Dari <b>${d.total}</b> campaign yang dikelola cron: `;
+    exp += `<b style="color:var(--on)">${d.on} lagi ON</b>`;
+    exp += ` · <b style="color:var(--off)">${d.off} OFF</b>`;
+    if(d.unknown) exp += ` · <b style="color:var(--warn)">${d.unknown} gak kebaca</b>`;
+    exp += `. Yang ON itu lagi belanja budget sekarang; yang OFF lagi di-pause (biasanya kena jadwal malam atau dimatiin manual).`;
+    slot.innerHTML = `<h3>📡 Status live Meta — <code>act_${esc(d.act_id)}</code></h3>
+      <p class="syn">Disinkron dari VPS: ${esc(d.synced_at)} · browser nggak manggil Meta langsung (anti spam API)</p>
+      <div class="counts">
+        <div class="cbox on"><div class="n">${d.on}</div><div class="l">ON</div></div>
+        <div class="cbox off"><div class="n">${d.off}</div><div class="l">OFF</div></div>
+        <div class="cbox unk"><div class="n">${d.unknown}</div><div class="l">?</div></div>
+      </div>
+      <div class="explain">${exp}</div>
+      ${onC.length?`<details open><summary>🟢 Campaign yang lagi ON (${onC.length})</summary><ul class="clist">${onC.map(li).join("")}</ul></details>`:""}
+      ${offC.length?`<details><summary>🔴 Campaign yang OFF (${offC.length})</summary><ul class="clist">${offC.map(li).join("")}</ul></details>`:""}
+      ${unkC.length?`<details><summary>⚪ Gak kebaca (${unkC.length})</summary><ul class="clist">${unkC.map(li).join("")}</ul></details>`:""}`;
+  }catch(e){
+    slot.innerHTML = `<h3>📡 Status live Meta</h3><p class="err">Belum ada data status (${esc(e.message)}). Jalankan <code>sync_status.py</code> di VPS dulu. Jadwal cron tetap tampil di bawah.</p>`;
+  }
+}
+
 function render(){
-  document.getElementById("meta").textContent = "Snapshot: " + SNAPSHOT + " · sumber: crontab VPS srv1641968";
+  document.getElementById("meta").textContent = "Snapshot jadwal: " + SNAPSHOT + " · status live disinkron dari VPS srv1641968";
   for(const id of ["p71","p72"]){
     const a = ACCT[id];
     const col = id==="p71" ? "var(--a71)" : "var(--a72)";
@@ -163,7 +228,10 @@ function render(){
       <h2>${a.name}</h2>
       <span class="pill">${a.pills[0]}</span>
       <span class="pill">${a.pills[1]}</span>
-      <span class="pill">${a.jobs.length} cron job</span></div><div class="grid">`;
+      <span class="pill">${a.jobs.length} cron job</span></div>
+      <div class="live" id="live-${id}"><h3>📡 Status live Meta</h3><p class="syn">memuat…</p></div>
+      <h2 style="font-size:.95rem;color:var(--muted);margin:18px 0 10px">🗓️ Jadwal cron (dayparting)</h2>
+      <div class="grid">`;
     for(const j of a.jobs){
       let camps = j.camps && j.camps.length
         ? `<details><summary>Campaign dikelola (${j.camps.length})</summary><ul class="camp">${j.camps.map(c=>`<li>${c}</li>`).join("")}</ul></details>`
@@ -191,6 +259,8 @@ document.querySelectorAll(".tab").forEach(t=>{
   });
 });
 render();
+loadLive("p71");
+loadLive("p72");
 </script>
 </body>
 </html>

@@ -1,0 +1,188 @@
+{
+ "account": "a71",
+ "act_id": "1128908469237968",
+ "synced_at": "2026-06-27 10:37:02 WIB",
+ "total": 22,
+ "on": 15,
+ "off": 7,
+ "unknown": 0,
+ "error": null,
+ "campaigns": [
+  {
+   "id": "120247324395540016",
+   "name": "6/26/26 (TESTING VIDEO 'GOWS+CCST') HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247324544130016",
+   "name": "6/26/26 (TESTING VIDEO 'MDTM+SOUN') HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247324715690016",
+   "name": "6/26/26 (TESTING VIDEO 'HJTN') HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247186003750016",
+   "name": "6/24/2026 ( SCALE I | AUTO | GOWS | image )  HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.200/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247096903250016",
+   "name": "6/23/2026 (Pra Scaling GOWS image) HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.200/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247186982810016",
+   "name": "6/24/26 (Pra Scaling SOUN image) HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.850/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247186914480016",
+   "name": "6/24/26 (Pra Scaling MDTM image) HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.200/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120246944857260016",
+   "name": "FAILED",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247008941990016",
+   "name": "6/22/26 (TESTING CBO) IMAGES - 04 PERSONAL SERVICE HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247094143910016",
+   "name": "6/23/26 (TESTING CBO) IMAGES - 09 HOME PRODUCT HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247094200760016",
+   "name": "6/23/26 (TESTING CBO) IMAGES - 10 DIGITAL SERVICE HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247094928520016",
+   "name": "FAILED",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247254493650016",
+   "name": "FAILED",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247257653290016",
+   "name": "6/25/26 (TESTING CBO) VIDEOS - 25 VIDEO TEST CBO 01 HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247254330160016",
+   "name": "6/25/26 (TESTING CBO) IMAGES - 20 CRAFT KERAJINAN HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247253359020016",
+   "name": "6/25/26 (TESTING CBO) IMAGES - 18 HOBI CUAN HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247254740760016",
+   "name": "FAILED",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247259092570016",
+   "name": "6/25/26 (TESTING CBO) VIDEOS - 27 VIDEO TEST CBO 03 HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247258902670016",
+   "name": "6/25/26 (TESTING CBO) VIDEOS - 26 VIDEO TEST CBO 02 HH",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247327841260016",
+   "name": "6/25/26 (TESTING CBO) IMAGES - 21 PRODUKSI JASA HH - Copy",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247327854420016",
+   "name": "6/25/26 (TESTING CBO) IMAGES - 20 CRAFT KERAJINAN HH - Copy",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120247327872860016",
+   "name": "6/25/26 (TESTING CBO) IMAGES - 18 HOBI CUAN HH - Copy",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_SALES"
+  }
+ ]
+}

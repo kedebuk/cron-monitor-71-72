@@ -1,0 +1,60 @@
+{
+ "account": "a72",
+ "act_id": "8682526015207885",
+ "synced_at": "2026-06-27 10:37:02 WIB",
+ "total": 6,
+ "on": 6,
+ "off": 0,
+ "unknown": 0,
+ "error": null,
+ "campaigns": [
+  {
+   "id": "120250968763500350",
+   "name": "(TESTING CBO) TB 6/5/26 ON",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp3.500/hari",
+   "objective": "OUTCOME_LEADS"
+  },
+  {
+   "id": "120251662121500350",
+   "name": "( TESTING CBO ) TB 6/26/26 STATUE IMAGE NEW 10 ON",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.306/hari",
+   "objective": "OUTCOME_LEADS"
+  },
+  {
+   "id": "120252739852130350",
+   "name": "(TESTING CBO) TB 6/5/26 – Copy 3",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.500/hari",
+   "objective": "OUTCOME_LEADS"
+  },
+  {
+   "id": "120252732679770350",
+   "name": "(TESTING CBO) TB 6/5/26 – LP2 ON",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.500/hari",
+   "objective": "OUTCOME_LEADS"
+  },
+  {
+   "id": "120252740730790350",
+   "name": "( TESTING CBO ) TB 6/26/26 STATUE IMAGE NEW 10 - Copy",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.000/hari",
+   "objective": "OUTCOME_LEADS"
+  },
+  {
+   "id": "120252741870700350",
+   "name": "(TESTING CBO) TB 6/5/26 – Copy - PURCHASE 150rb",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp1.500/hari",
+   "objective": "OUTCOME_SALES"
+  }
+ ]
+}
