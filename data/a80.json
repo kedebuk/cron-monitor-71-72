@@ -1,0 +1,713 @@
+{
+ "account": "a80",
+ "act_id": "829952156628240",
+ "synced_at": "2026-06-27 10:47:58 WIB",
+ "total": 70,
+ "on": 0,
+ "off": 70,
+ "unknown": 0,
+ "error": null,
+ "campaigns": [
+  {
+   "id": "120247333593860644",
+   "name": "6/27/26 A80 TEST 01 NOVA ORBIT PRISMA ATLAS HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "CAMPAIGN",
+   "kind": "campaign",
+   "code": "A80 TEST 01 MONSTER WINNERS"
+  },
+  {
+   "id": "120247333678220644",
+   "name": "6/27/26 A80 TEST 02 SAMUDRA AURORA KANVAS RIMBA HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "CAMPAIGN",
+   "kind": "campaign",
+   "code": "A80 TEST 02 MID WINNERS"
+  },
+  {
+   "id": "120247333685560644",
+   "name": "6/27/26 A80 TEST 03 SULTAN LUMINA KANVAS2 HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "CAMPAIGN",
+   "kind": "campaign",
+   "code": "A80 TEST 03 SOLID WINNERS"
+  },
+  {
+   "id": "120247333711940644",
+   "name": "6/27/26 A80 TEST 04 RESERVE HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "CAMPAIGN",
+   "kind": "campaign",
+   "code": "A80 TEST 04 SECONDARY WINNERS"
+  },
+  {
+   "id": "120247333717380644",
+   "name": "6/27/26 A80 TEST 05 RESERVE HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "CAMPAIGN",
+   "kind": "campaign",
+   "code": "A80 TEST 05 LOWER CPP BACKUP"
+  },
+  {
+   "id": "120247333735890644",
+   "name": "6/27/26 A80 TEST 06 RESERVE HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "CAMPAIGN",
+   "kind": "campaign",
+   "code": "A80 TEST 06 TAIL TESTERS"
+  },
+  {
+   "id": "120247333751030644",
+   "name": "6/27/26 A80 TEST 07 RESERVE HH",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "CAMPAIGN",
+   "kind": "campaign",
+   "code": "A80 TEST 07 EXTRA HOLDOUT"
+  },
+  {
+   "id": "120247333621680644",
+   "name": "6/27/26 NOVA HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "LFNS"
+  },
+  {
+   "id": "120247333622930644",
+   "name": "6/27/26 ORBIT HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "ECCC"
+  },
+  {
+   "id": "120247333638210644",
+   "name": "6/27/26 PRISMA HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "FZPR"
+  },
+  {
+   "id": "120247333676570644",
+   "name": "6/27/26 ATLAS HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "HDUO"
+  },
+  {
+   "id": "120247333680060644",
+   "name": "6/27/26 SAMUDRA HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "FZNE"
+  },
+  {
+   "id": "120247333681260644",
+   "name": "6/27/26 AURORA HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "GTHE"
+  },
+  {
+   "id": "120247333682140644",
+   "name": "6/27/26 KANVAS HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "XXX"
+  },
+  {
+   "id": "120247333683900644",
+   "name": "6/27/26 RIMBA HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "HYCB"
+  },
+  {
+   "id": "120247333707900644",
+   "name": "6/27/26 SULTAN HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "BSTA"
+  },
+  {
+   "id": "120247333722890644",
+   "name": "6/27/26 LUMINA HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "QLFP"
+  },
+  {
+   "id": "120247333756380644",
+   "name": "6/27/26 KANVAS-2 HHADS",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "ADSET",
+   "kind": "adset",
+   "code": "RON"
+  },
+  {
+   "id": "120247334148130644",
+   "name": "6/27/26 NOVA Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "LFNS"
+  },
+  {
+   "id": "120247334148940644",
+   "name": "6/27/26 NOVA Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "LFNS"
+  },
+  {
+   "id": "120247334149860644",
+   "name": "6/27/26 NOVA Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "LFNS"
+  },
+  {
+   "id": "120247334151100644",
+   "name": "6/27/26 NOVA Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "LFNS"
+  },
+  {
+   "id": "120247334153400644",
+   "name": "6/27/26 NOVA Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "LFNS"
+  },
+  {
+   "id": "120247334154400644",
+   "name": "6/27/26 ORBIT Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "ECCC"
+  },
+  {
+   "id": "120247334155250644",
+   "name": "6/27/26 ORBIT Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "ECCC"
+  },
+  {
+   "id": "120247334156950644",
+   "name": "6/27/26 ORBIT Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "ECCC"
+  },
+  {
+   "id": "120247334158740644",
+   "name": "6/27/26 ORBIT Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "ECCC"
+  },
+  {
+   "id": "120247334160990644",
+   "name": "6/27/26 ORBIT Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "ECCC"
+  },
+  {
+   "id": "120247334164240644",
+   "name": "6/27/26 PRISMA Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZPR"
+  },
+  {
+   "id": "120247334164890644",
+   "name": "6/27/26 PRISMA Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZPR"
+  },
+  {
+   "id": "120247334165460644",
+   "name": "6/27/26 PRISMA Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZPR"
+  },
+  {
+   "id": "120247334165900644",
+   "name": "6/27/26 PRISMA Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZPR"
+  },
+  {
+   "id": "120247334167010644",
+   "name": "6/27/26 PRISMA Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZPR"
+  },
+  {
+   "id": "120247334219530644",
+   "name": "6/27/26 ATLAS Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HDUO"
+  },
+  {
+   "id": "120247334169110644",
+   "name": "6/27/26 ATLAS Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HDUO"
+  },
+  {
+   "id": "120247334220740644",
+   "name": "6/27/26 ATLAS Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HDUO"
+  },
+  {
+   "id": "120247334221840644",
+   "name": "6/27/26 ATLAS Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HDUO"
+  },
+  {
+   "id": "120247334223670644",
+   "name": "6/27/26 ATLAS Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HDUO"
+  },
+  {
+   "id": "120247334171070644",
+   "name": "6/27/26 SAMUDRA Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZNE"
+  },
+  {
+   "id": "120247334172410644",
+   "name": "6/27/26 SAMUDRA Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZNE"
+  },
+  {
+   "id": "120247334173680644",
+   "name": "6/27/26 SAMUDRA Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZNE"
+  },
+  {
+   "id": "120247334174270644",
+   "name": "6/27/26 SAMUDRA Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZNE"
+  },
+  {
+   "id": "120247334114710644",
+   "name": "6/27/26 SAMUDRA Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "FZNE"
+  },
+  {
+   "id": "120247334175340644",
+   "name": "6/27/26 AURORA Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "GTHE"
+  },
+  {
+   "id": "120247334176370644",
+   "name": "6/27/26 AURORA Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "GTHE"
+  },
+  {
+   "id": "120247334178070644",
+   "name": "6/27/26 AURORA Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "GTHE"
+  },
+  {
+   "id": "120247334224670644",
+   "name": "6/27/26 AURORA Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "GTHE"
+  },
+  {
+   "id": "120247334226410644",
+   "name": "6/27/26 AURORA Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "GTHE"
+  },
+  {
+   "id": "120247334180080644",
+   "name": "6/27/26 KANVAS Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "XXX"
+  },
+  {
+   "id": "120247334228690644",
+   "name": "6/27/26 KANVAS Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "XXX"
+  },
+  {
+   "id": "120247334231050644",
+   "name": "6/27/26 KANVAS Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "XXX"
+  },
+  {
+   "id": "120247334117990644",
+   "name": "6/27/26 KANVAS Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "XXX"
+  },
+  {
+   "id": "120247334235060644",
+   "name": "6/27/26 KANVAS Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "XXX"
+  },
+  {
+   "id": "120247334182090644",
+   "name": "6/27/26 RIMBA Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HYCB"
+  },
+  {
+   "id": "120247334183340644",
+   "name": "6/27/26 RIMBA Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HYCB"
+  },
+  {
+   "id": "120247334119720644",
+   "name": "6/27/26 RIMBA Angle 03 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HYCB"
+  },
+  {
+   "id": "120247334121790644",
+   "name": "6/27/26 RIMBA Angle 04 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HYCB"
+  },
+  {
+   "id": "120247334123100644",
+   "name": "6/27/26 RIMBA Angle 05 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "HYCB"
+  },
+  {
+   "id": "120247334237770644",
+   "name": "6/27/26 SULTAN Angle 01 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "BSTA"
+  },
+  {
+   "id": "120247334239330644",
+   "name": "6/27/26 SULTAN Angle 02 HHAD",
+   "on": false,
+   "status": "PAUSED",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "BSTA"
+  },
+  {
+   "id": "120247334241040644",
+   "name": "6/27/26 SULTAN Angle 03 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "BSTA"
+  },
+  {
+   "id": "120247334127890644",
+   "name": "6/27/26 SULTAN Angle 04 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "BSTA"
+  },
+  {
+   "id": "120247334128500644",
+   "name": "6/27/26 SULTAN Angle 05 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "BSTA"
+  },
+  {
+   "id": "120247334129920644",
+   "name": "6/27/26 LUMINA Angle 01 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "QLFP"
+  },
+  {
+   "id": "120247334184680644",
+   "name": "6/27/26 LUMINA Angle 02 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "QLFP"
+  },
+  {
+   "id": "120247334185660644",
+   "name": "6/27/26 LUMINA Angle 03 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "QLFP"
+  },
+  {
+   "id": "120247334187370644",
+   "name": "6/27/26 LUMINA Angle 04 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "QLFP"
+  },
+  {
+   "id": "120247334188450644",
+   "name": "6/27/26 LUMINA Angle 05 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "QLFP"
+  },
+  {
+   "id": "120247334189430644",
+   "name": "6/27/26 KANVAS-2 Angle 01 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "RON"
+  },
+  {
+   "id": "120247334190310644",
+   "name": "6/27/26 KANVAS-2 Angle 02 HHAD",
+   "on": false,
+   "status": "IN_PROCESS",
+   "budget": "-",
+   "objective": "AD",
+   "kind": "ad",
+   "code": "RON"
+  }
+ ],
+ "note": "A80 easy-code rename retry readback: 70/70 ok, all PAUSED. Source: Hermes cron output 9dd7988046f1."
+}
