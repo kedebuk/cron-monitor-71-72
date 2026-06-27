@@ -6,7 +6,15 @@ Tiap pagi script meng-`ACTIVE`-kan campaign, tiap malam meng-`PAUSED`-kan — su
 
 ## Isi
 - `index.html` — dashboard 1-file (HTML/CSS/JS, tanpa build). Buka langsung di browser atau via GitHub Pages.
+- `sync_status.py` — generator status live (jalan **di VPS**, baca token server-side, 1 batch call/akun, tulis `data/*.json` tanpa token).
+- `data/a71.json`, `data/a72.json` — snapshot status ON/OFF campaign (non-rahasia).
 - Tab **Akun 71**, **Akun 72**, dan **Info**.
+
+## Status live Meta (anti spam API)
+Tiap akun nampilin status **ON/OFF live** per campaign + ringkasan (berapa ON / OFF) + penjelasan gampang. Caranya: `sync_status.py` di VPS baca status ke Meta **1× batch per akun**, tulis JSON ke repo; browser cuma baca JSON, **nggak pernah manggil Meta langsung** → nggak ada spam API.
+
+## Kontrol ON/OFF cron
+Halaman statis nggak boleh pegang token (bocor di browser). Kontrol cron lewat **MASBOI di Telegram**: `on/off cron a71`, `on/off cron a72` → MASBOI komen/uncomment baris crontab di VPS + readback. Opsi tombol di dashboard butuh SSH key sebagai GitHub Secret (nunggu keputusan).
 
 ## Yang dipantau
 | Akun | Script | Jadwal (WIB) | Fungsi | Status |
