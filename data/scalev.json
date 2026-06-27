@@ -1,0 +1,37 @@
+{
+ "account": "scalev-stableprofit",
+ "act_id": "Scalev store 17742",
+ "synced_at": "2026-06-27 11:07:02 WIB",
+ "total": 3,
+ "on": 3,
+ "off": 0,
+ "unknown": 0,
+ "error": null,
+ "campaigns": [
+  {
+   "id": "vps-cron-purchase-notifier",
+   "name": "Purchase notifier — polling paid/settled orders",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "* * * * *",
+   "objective": "Notify Telegram on new Stable Profit purchases"
+  },
+  {
+   "id": "vps-cron-daily-recap",
+   "name": "Daily recap — Scalev Stable Profit summary",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "21:00 WIB daily",
+   "objective": "Send daily purchase/order recap"
+  },
+  {
+   "id": "vps-cron-payment-guard",
+   "name": "Payment guard — keep payment methods/VA alive",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "* * * * *",
+   "objective": "Alert + additive-only restore if payment config missing"
+  }
+ ],
+ "note": "Verified from VPS srv1641968 crontab. Local Hermes job a4b50ab2f0f0 is paused because notifier was migrated to VPS. State seen_ids=147, last_checked_at=2026-06-27T11:07:02+07:00."
+}
