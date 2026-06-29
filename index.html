@@ -151,7 +151,7 @@
 </footer>
 
 <script>
-const SNAPSHOT = "2026-06-29";
+const SNAPSHOT = "2026-06-29-a72-detail";
 const ACCT = {
   p71: {
     name:"Akun 71 — Evepro 71",
@@ -280,8 +280,8 @@ async function loadLive(id){
     const offC = d.campaigns.filter(c=>c.on===false);
     const unkC = d.campaigns.filter(c=>c.on===null);
     const li = c => `<li><span class="badge ${c.on?'b-on':(c.on===false?'b-off':'b-dorm')}">${c.on?'ON':(c.on===false?'OFF':'?')}</span>
-        <span class="cn">${esc(c.name)}</span><span class="cb">${esc(c.budget||'-')}</span></li>`;
-    let exp = `Dari <b>${d.total}</b> campaign yang dikelola cron: `;
+        <span class="cn">${esc(c.name)}<br><small style="color:var(--muted)"><code>${esc(c.id||'-')}</code> · ${esc(c.objective||'-')} · ${esc(c.status||'-')}${c.lp?` · LP: ${esc(c.lp)}`:''}</small></span><span class="cb">${esc(c.budget||'-')}</span></li>`;
+    let exp = `Dari <b>${d.total}</b> campaign yang dimonitor: `;
     exp += `<b style="color:var(--on)">${d.on} lagi ON</b>`;
     exp += ` · <b style="color:var(--off)">${d.off} OFF</b>`;
     if(d.unknown) exp += ` · <b style="color:var(--warn)">${d.unknown} gak kebaca</b>`;

@@ -29,6 +29,14 @@ ACCT = {
     'a72': ('8682526015207885', ['a72_statue_toggle.py']),
 }
 
+# Extra Hermes-managed / ad-hoc campaigns that are not inside old VPS toggle scripts
+# but Roni wants visible on the cron monitor live campaign detail.
+EXTRA_IDS = {
+    'a72': [
+        ('120253104947760350', 'CHIBY JUL ON · LP2 · 10 ads'),
+    ],
+}
+
 
 def load_token() -> str:
     for line in ENV_FILE.read_text(errors='ignore').splitlines():
@@ -97,6 +105,7 @@ def main():
         pairs = []
         for sc in scripts:
             pairs += parse_ids(sc)
+        pairs += EXTRA_IDS.get(acct, [])
         ids = [c for c, _ in pairs]
         label = {c: n for c, n in pairs}
         data = graph_batch(token, ids)

@@ -1,9 +1,9 @@
 {
  "account": "a72",
  "act_id": "8682526015207885",
- "synced_at": "2026-06-27 10:37:02 WIB",
- "total": 6,
- "on": 6,
+ "synced_at": "2026-06-29 16:20:00 WIB",
+ "total": 7,
+ "on": 7,
  "off": 0,
  "unknown": 0,
  "error": null,
@@ -55,6 +55,15 @@
    "status": "ACTIVE",
    "budget": "Rp150.000/hari",
    "objective": "OUTCOME_SALES"
+  },
+  {
+   "id": "120253104947760350",
+   "name": "CHIBY JUL ON",
+   "on": true,
+   "status": "ACTIVE",
+   "budget": "Rp100.000/hari",
+   "objective": "OUTCOME_LEADS",
+   "lp": "https://tinybestie.id/lp2/"
   }
  ],
  "budget_note": "IDR budget corrected: Meta Graph daily_budget is raw rupiah, not cents."
