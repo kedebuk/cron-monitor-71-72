@@ -151,7 +151,7 @@
 </footer>
 
 <script>
-const SNAPSHOT = "2026-06-27";
+const SNAPSHOT = "2026-06-29";
 const ACCT = {
   p71: {
     name:"Akun 71 — Evepro 71",
@@ -228,22 +228,41 @@ const ACCT = {
     ]
   },
   p72: {
-    name:"Akun 72 — Tiny Storie / EVPO-Herbahero-72",
-    pills:["act_8682526015207885","VPS /root/automation","color:72"],
+    name:"Akun 72 — TinyBestie / TinyStatue",
+    pills:["act_8682526015207885","Hermes cron + Meta batch API","color:72"],
     jobs:[
-      { title:"STATUE / screenshot — ON (harian)", badge:["b-on","Aktif daily"],
-        script:"a72_statue_toggle.py on", cron:"30 22 * * *", when:"05:30 WIB · tiap hari",
-        desc:"Tiap pagi nyalain (ACTIVE) 6 campaign screenshot/STATUE Tiny Storie.",
-        camps:["TB 6/5/26 (Bestie) - 350rb","TB STATUE IMAGE NEW 10 - 140rb","TB 6/5/26 Copy 2 - 150rb","TB 6/5/26 Copy 3 - 150rb","TB STATUE NEW 10 Copy (dup) - 140rb","TB 6/5/26 PURCHASE - 150rb (dup)"],
-        note:"AKTIF setiap hari. (Copy lama 120252583146450350 di-OFF 26 Jun, diganti PURCHASE dup.)", onCmd:"on cron a72 statue 0530", offCmd:"off cron a72 statue 0530" },
-      { title:"STATUE / screenshot — OFF (harian)", badge:["b-off","Aktif daily"],
-        script:"a72_statue_toggle.py off", cron:"0 15 * * *", when:"22:00 WIB · tiap hari",
-        desc:"Tiap malam matiin (PAUSED) 6 campaign screenshot/STATUE tadi.",
-        camps:["(sama dengan job ON — 6 campaign)"],
-        note:"AKTIF setiap hari.", onCmd:"on cron a72 statue 2200 pause", offCmd:"off cron a72 statue 2200 pause" }
+      { title:"Bestie + Statue — ON pagi", badge:["b-on","Aktif daily"],
+        script:"account72_bestie_0430_on.py", cron:"30 5 * * *", when:"05:30 WIB · tiap hari",
+        desc:"Auto-ON campaign gate TinyBestie dan TinyStatue yang memang masuk keep-list pagi hari. Output Telegram dibuat pendek.",
+        camps:["Bestie keep campaign 120250968763500350","Statue keep campaign 120251662121500350"],
+        note:"Hermes cron aktif. Scope campaign gate only; tidak sentuh adset/ad/budget/delete.", onCmd:"resume cron account72-bestie-statue-0530-on", offCmd:"pause cron account72-bestie-statue-0530-on" },
+      { title:"Bestie + Statue — OFF malam", badge:["b-on","Aktif daily"],
+        script:"account72_bestie_2200_pause.py", cron:"0 22 * * *", when:"22:00 WIB · tiap hari",
+        desc:"Auto-pause campaign gate TinyBestie dan TinyStatue malam hari.",
+        camps:["Bestie keep campaign 120250968763500350","Statue keep campaign 120251662121500350"],
+        note:"Hermes cron aktif. Kalau Roni minta OFF manual, campaign gate dipause dan cron ON pagi juga perlu dicek.", onCmd:"resume cron account72-bestie-statue-2200-pause", offCmd:"pause cron account72-bestie-statue-2200-pause" },
+      { title:"Checkout 50rb no-result pause", badge:["b-on","Aktif 15m"],
+        script:"account72_checkout_50k_no_result_pause.py", cron:"every 15m", when:"tiap 15 menit",
+        desc:"Guard checkout A72: kalau campaign bernama CHECKOUT spend hari ini ≥Rp50.000 dan result 0, campaign gate di-PAUSE.",
+        camps:["Result = max Lead / InitiateCheckout / Purchase","Scope: campaign name contains CHECKOUT","Action: PAUSED campaign gate only"],
+        note:"Aktif. No adset/ad/budget/bid/delete. Meta calls harus batch-first kalau dikembangkan lagi.", onCmd:"resume cron account72-checkout-50k-no-result-pause", offCmd:"pause cron account72-checkout-50k-no-result-pause" },
+      { title:"TinyStatue order auto-classification repair", badge:["b-dorm","Paused"],
+        script:"tinystatue_order_autofix.sh", cron:"every 5m", when:"tiap 5 menit (paused)",
+        desc:"Watchdog lama untuk repair order TinyStatue yang salah kebaca sebagai TinyBestie di CS Lite.",
+        camps:["CS Lite / TinyStatue source repair","Tidak mutasi campaign Meta"],
+        note:"Terdaftar di Hermes tapi disabled/paused sekarang.", onCmd:"resume cron TinyStatue order auto-classification repair", offCmd:"pause cron TinyStatue order auto-classification repair" },
+      { title:"TinyStatue lead reconcile watchdog", badge:["b-dorm","Paused"],
+        script:"tinystatue_lead_reconcile_watchdog.py", cron:"every 10m", when:"tiap 10 menit (paused)",
+        desc:"Watchdog lama untuk reconcile Meta Lead count vs CS Lite exact-source TinyStatue.",
+        camps:["Read/reconcile only kecuali ada repair spesifik","CS Lite source of truth"],
+        note:"Terdaftar di Hermes tapi paused.", onCmd:"resume cron tinystatue-lead-reconcile-watchdog", offCmd:"pause cron tinystatue-lead-reconcile-watchdog" },
+      { title:"TinyStorie72 pixel mismatch watchdog", badge:["b-dorm","Paused"],
+        script:"tinystorie72_pixel_watchdog.py", cron:"every 30m", when:"tiap 30 menit (paused)",
+        desc:"Watchdog lama untuk cek Pixel adset Lead A72 vs LP Tiny Storie.",
+        camps:["Pixel sanity check","No active delivery saat ini"],
+        note:"Terdaftar tapi paused sejak 2026-06-22.", onCmd:"resume cron tinystorie72-pixel-mismatch-watchdog", offCmd:"pause cron tinystorie72-pixel-mismatch-watchdog" }
     ]
-  }
-};
+  }};
 
 const LIVE = { p71:"./data/a71.json", p72:"./data/a72.json", p80:"./data/a80.json", pscalev:"./data/scalev.json" };
 
